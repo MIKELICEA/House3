@@ -1,17 +1,17 @@
-public class LivingRoom {
-    private int windows;
+public class BedRoomBuilder {
+
+    private BedSize bedSize;
     private boolean tv;
-    private boolean homeTeather;
     private int width;
     private int height;
     private String color;
 
-    public int getWindows() {
-        return windows;
+    public BedSize getBedSize() {
+        return bedSize;
     }
 
-    public void setWindows(int windows) {
-        this.windows = windows;
+    public void setBedSize(BedSize bedSize) {
+        this.bedSize = bedSize;
     }
 
     public boolean getTv() {
@@ -20,14 +20,6 @@ public class LivingRoom {
 
     public void setTv(boolean tv) {
         this.tv = tv;
-    }
-
-    public boolean getHomeTeather() {
-        return homeTeather;
-    }
-
-    public void setHomeTeather(boolean homeTeather) {
-        this.homeTeather = homeTeather;
     }
 
     public int getWidth() {
@@ -53,4 +45,13 @@ public class LivingRoom {
     public void setColor(String color) {
         this.color = color;
     }
+
+    BedRoomBuilder(){
+    }
+
+    public BedRoom build(){
+        BedRoom bedRoom = new BedRoom(this);
+        return bedRoom;
+    }
 }
+

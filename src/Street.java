@@ -1,6 +1,6 @@
 import java.util.List;
 
-class Street {
+public class Street {
     private String name;
     private List<House> houses;
 

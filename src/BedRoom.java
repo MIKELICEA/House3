@@ -1,4 +1,4 @@
-class BedRoom {
+public class BedRoom {
 
     private BedSize bedSize;
     private boolean tv;
@@ -44,6 +44,17 @@ class BedRoom {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    BedRoom(BedRoomBuilder builder){
+        this.bedSize = builder.build().getBedSize();
+        this.tv = builder.build().getTv();
+        this.width = builder.build().getWidth();
+        this.height = builder.build().getHeight();
+        this.color = builder.build().getColor();
+    }
+    public static BedRoomBuilder builder(){
+        return new BedRoomBuilder();
     }
 }
 

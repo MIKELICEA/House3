@@ -1,4 +1,5 @@
-public class House{
+public class HouseBuilder{
+
     private Kitchen kitchen;
     private DiningRoom diningRoom;
     private LivingRoom livingRoom;
@@ -54,23 +55,10 @@ public class House{
         this.yard = yard;
     }
 
-    public void addRoom(BedRoom bedroom)
-    {
-
+    HouseBuilder(){
     }
-
-    public void addRoom(RestRoom restroom)
-    {
-
-    }
-
-    House(HouseBuilder builder){
-        this.kitchen = builder.build().getKitchen();
-        this.diningRoom = builder.build().getDiningRoom();
-        this.bedRooms = builder.build().getBedRooms();
-    }
-
-    public static HouseBuilder builder(){
-        return new HouseBuilder();
+    public House build(){
+        House house = new House(this);
+        return house;
     }
 }

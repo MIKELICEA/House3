@@ -1,4 +1,4 @@
-class Kitchen {
+public class Kitchen {
 
     private boolean stove;
     private boolean sink;
@@ -6,7 +6,7 @@ class Kitchen {
     private boolean refrigerator;
     private boolean oven;
     private int width;
-    private int heiht;
+    private int height;
     private String color;
 
     public void setStove(boolean stove) {
@@ -57,12 +57,12 @@ class Kitchen {
         this.width = width;
     }
 
-    public int getHeiht() {
-        return heiht;
+    public int getHeight() {
+        return height;
     }
 
-    public void setHeiht(int heiht) {
-        this.heiht = heiht;
+    public void setHeight(int heiht) {
+        this.height = heiht;
     }
 
     public String getColor() {
@@ -72,4 +72,24 @@ class Kitchen {
     public void setColor(String color) {
         this.color = color;
     }
+
+    Kitchen(KitchenBuilder builder){
+
+        this.stove = builder.build().getStove();
+        this.sink = builder.build().getSink();
+        this.windows = builder.build().getWindows();
+        this.refrigerator = builder.build().getRefrigerator();
+        this.oven = builder.build().getOven();
+        this.width = builder.build().getWidth();
+        this.height = builder.build().getHeight();
+        this.color = builder.build().getColor();
+    }
+
+    public static KitchenBuilder builder(){
+
+        return new KitchenBuilder();
+    }
 }
+
+
+

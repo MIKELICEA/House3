@@ -1,8 +1,8 @@
-class DiningRoom {
+public class DiningRoom {
     private int windows;
     private boolean tv;
     private int width;
-    private int geight;
+    private int height;
     private String color;
     private int chairsCapacity;
 
@@ -30,12 +30,12 @@ class DiningRoom {
         this.width = width;
     }
 
-    public int getGeight() {
-        return geight;
+    public int getHeight() {
+        return height;
     }
 
-    public void setGeight(int geight) {
-        this.geight = geight;
+    public void setHeight(int geight) {
+        this.height = geight;
     }
 
     public String getColor() {
@@ -52,5 +52,16 @@ class DiningRoom {
 
     public void setChairsCapacity(int chairsCapacity) {
         this.chairsCapacity = chairsCapacity;
+    }
+    DiningRoom(DiningRoomBuilder builder){
+        this.windows = builder.build().getWindows();
+        this.tv = builder.build().getTv();
+        this.width = builder.build().getWidth();
+        this.height = builder.build().getHeight();
+        this.color = builder.build().getColor();
+        this.chairsCapacity = builder.build().getChairsCapacity();
+    }
+    public static DiningRoomBuilder builder(){
+        return new DiningRoomBuilder();
     }
 }

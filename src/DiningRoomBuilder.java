@@ -1,10 +1,11 @@
-public class LivingRoom {
+public class DiningRoomBuilder{
+
     private int windows;
     private boolean tv;
-    private boolean homeTeather;
     private int width;
     private int height;
     private String color;
+    private int chairsCapacity;
 
     public int getWindows() {
         return windows;
@@ -20,14 +21,6 @@ public class LivingRoom {
 
     public void setTv(boolean tv) {
         this.tv = tv;
-    }
-
-    public boolean getHomeTeather() {
-        return homeTeather;
-    }
-
-    public void setHomeTeather(boolean homeTeather) {
-        this.homeTeather = homeTeather;
     }
 
     public int getWidth() {
@@ -53,4 +46,22 @@ public class LivingRoom {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public int getChairsCapacity() {
+        return chairsCapacity;
+    }
+
+    public void setChairsCapacity(int chairsCapacity) {
+        this.chairsCapacity = chairsCapacity;
+    }
+
+    DiningRoomBuilder(){
+    }
+
+    public DiningRoom build(){
+        DiningRoom diningRoom = new DiningRoom(this);
+        return diningRoom;
+    }
+
 }
+

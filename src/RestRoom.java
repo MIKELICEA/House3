@@ -1,4 +1,4 @@
-class RestRoom{
+public class RestRoom{
     private boolean showerCabin;
     private int width;
     private int height;

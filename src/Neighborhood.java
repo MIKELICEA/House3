@@ -1,6 +1,6 @@
 import java.util.List;
 
-class Neighborhood{
+public class Neighborhood{
     private List<Street>streets;
     private int gardens;
     private boolean basketballCourt;

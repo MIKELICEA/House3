@@ -1,4 +1,4 @@
-class Yard{
+public class Yard{
     boolean grass;
     int width;
     int height;
