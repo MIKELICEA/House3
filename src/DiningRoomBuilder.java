@@ -1,5 +1,4 @@
 public class DiningRoomBuilder{
-
     private int windows;
     private boolean tv;
     private int width;
@@ -7,60 +6,38 @@ public class DiningRoomBuilder{
     private String color;
     private int chairsCapacity;
 
-    public int getWindows() {
-        return windows;
-    }
-
-    public void setWindows(int windows) {
+    public DiningRoomBuilder windows(final int windows){
         this.windows = windows;
+        return this;
     }
 
-    public boolean getTv() {
-        return tv;
-    }
-
-    public void setTv(boolean tv) {
+    public DiningRoomBuilder tv(final boolean tv){
         this.tv = tv;
+        return this;
     }
 
-    public int getWidth() {
-        return width;
+    public DiningRoomBuilder width(final int width){
+        this.width= width;
+        return this;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
+    public DiningRoomBuilder height(final int height){
         this.height = height;
+        return this;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
+    public DiningRoomBuilder color (final String color){
         this.color = color;
+        return this;
     }
 
-    public int getChairsCapacity() {
-        return chairsCapacity;
-    }
-
-    public void setChairsCapacity(int chairsCapacity) {
-        this.chairsCapacity = chairsCapacity;
-    }
-
-    DiningRoomBuilder(){
+    public DiningRoomBuilder chairsCapacity(final int chairCapacity){
+        this.chairsCapacity = chairCapacity;
+        return this;
     }
 
     public DiningRoom build(){
-        DiningRoom diningRoom = new DiningRoom(this);
-        return diningRoom;
+        return new DiningRoom(windows, tv ,width, height, color, chairsCapacity);
     }
 
 }

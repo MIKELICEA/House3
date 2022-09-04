@@ -1,7 +1,7 @@
 public class Yard{
-    boolean grass;
-    int width;
-    int height;
+    private boolean grass;
+    private int width;
+    private int height;
     private String color;
 
     public boolean getGrass() {

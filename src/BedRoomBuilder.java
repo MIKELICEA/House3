@@ -6,52 +6,32 @@ public class BedRoomBuilder {
     private int height;
     private String color;
 
-    public BedSize getBedSize() {
-        return bedSize;
-    }
-
-    public void setBedSize(BedSize bedSize) {
+    public BedRoomBuilder windows(final BedSize bedSize){
         this.bedSize = bedSize;
+        return this;
     }
 
-    public boolean getTv() {
-        return tv;
-    }
-
-    public void setTv(boolean tv) {
+    public BedRoomBuilder tv(final boolean tv){
         this.tv = tv;
+        return this;
     }
 
-    public int getWidth() {
-        return width;
+    public BedRoomBuilder width(final int width){
+        this.width= width;
+        return this;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
+    public BedRoomBuilder height(final int height){
         this.height = height;
+        return this;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
+    public BedRoomBuilder color (final String color){
         this.color = color;
+        return this;
     }
-
-    BedRoomBuilder(){
-    }
-
     public BedRoom build(){
-        BedRoom bedRoom = new BedRoom(this);
-        return bedRoom;
+        return new BedRoom(bedSize, tv ,width, height, color);
     }
 }
 

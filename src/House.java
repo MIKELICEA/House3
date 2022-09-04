@@ -1,76 +1,52 @@
 public class House{
-    private Kitchen kitchen;
-    private DiningRoom diningRoom;
-    private LivingRoom livingRoom;
-    private RestRoom []restRooms;
-    private BedRoom []bedRooms;
-    private Yard yard;
+    private final Kitchen kitchen;
+    private final DiningRoom diningRoom;
+    private final LivingRoom livingRoom;
+
+    private final RestRoom []restRooms;
+    private final BedRoom []bedRooms;
+    private final Yard yard;
+    private static int houseCount;
+    public static int houseCount(){
+
+        return houseCount;
+    }
+
+    public House(Kitchen kitchen, DiningRoom diningRoom, LivingRoom livingRoom, RestRoom[] restRooms, BedRoom[] bedRooms, Yard yard) {
+        this.kitchen = kitchen;
+        this.diningRoom = diningRoom;
+        this.livingRoom = livingRoom;
+        this.restRooms = restRooms;
+        this.bedRooms = bedRooms;
+        this.yard = yard;
+    }
 
     public Kitchen getKitchen() {
         return kitchen;
-    }
-
-    public void setKitchen(Kitchen kitchen) {
-        this.kitchen = kitchen;
     }
 
     public DiningRoom getDiningRoom() {
         return diningRoom;
     }
 
-    public void setDiningRoom(DiningRoom diningRoom) {
-        this.diningRoom = diningRoom;
-    }
-
     public LivingRoom getLivingRoom() {
         return livingRoom;
     }
 
-    public void setLivingRoom(LivingRoom livingRoom) {
-        this.livingRoom = livingRoom;
-    }
-
-    public RestRoom[] getRestRooms() {
+    public RestRoom[] getRestRoom() {
         return restRooms;
-    }
-
-    public void setRestRooms(RestRoom[] restRooms) {
-        this.restRooms = restRooms;
     }
 
     public BedRoom[] getBedRooms() {
         return bedRooms;
     }
 
-    public void setBedRooms(BedRoom[] bedRooms) {
-        this.bedRooms = bedRooms;
-    }
-
     public Yard getYard() {
         return yard;
-    }
-
-    public void setYard(Yard yard) {
-        this.yard = yard;
-    }
-
-    public void addRoom(BedRoom bedroom)
-    {
-
-    }
-
-    public void addRoom(RestRoom restroom)
-    {
-
-    }
-
-    House(HouseBuilder builder){
-        this.kitchen = builder.build().getKitchen();
-        this.diningRoom = builder.build().getDiningRoom();
-        this.bedRooms = builder.build().getBedRooms();
     }
 
     public static HouseBuilder builder(){
         return new HouseBuilder();
     }
+
 }

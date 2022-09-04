@@ -7,58 +7,38 @@ public class HouseBuilder{
     private BedRoom []bedRooms;
     private Yard yard;
 
-    public Kitchen getKitchen() {
-        return kitchen;
-    }
-
-    public void setKitchen(Kitchen kitchen) {
+    public HouseBuilder kitchen(final Kitchen kitchen){
         this.kitchen = kitchen;
+        return this;
     }
 
-    public DiningRoom getDiningRoom() {
-        return diningRoom;
-    }
-
-    public void setDiningRoom(DiningRoom diningRoom) {
+    public HouseBuilder diningRoom(final DiningRoom diningRoom){
         this.diningRoom = diningRoom;
+        return this;
     }
 
-    public LivingRoom getLivingRoom() {
-        return livingRoom;
-    }
-
-    public void setLivingRoom(LivingRoom livingRoom) {
+    public HouseBuilder livingRoom(final LivingRoom livingRoom){
         this.livingRoom = livingRoom;
+        return this;
     }
 
-    public RestRoom[] getRestRooms() {
-        return restRooms;
-    }
-
-    public void setRestRooms(RestRoom[] restRooms) {
+    public HouseBuilder restRooms(final RestRoom restRooms){
         this.restRooms = restRooms;
+        return this;
     }
 
-    public BedRoom[] getBedRooms() {
-        return bedRooms;
-    }
-
-    public void setBedRooms(BedRoom[] bedRooms) {
+    public HouseBuilder bedRooms (final BedRoom bedRooms){
         this.bedRooms = bedRooms;
+        return this;
     }
 
-    public Yard getYard() {
-        return yard;
-    }
-
-    public void setYard(Yard yard) {
+    public HouseBuilder yard (final Yard yard){
         this.yard = yard;
+        return this;
     }
 
-    HouseBuilder(){
-    }
     public House build(){
-        House house = new House(this);
-        return house;
+        return new House(kitchen, diningRoom, livingRoom, restRooms, bedRooms, yard);
     }
+
 }

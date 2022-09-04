@@ -6,80 +6,51 @@ public class KitchenBuilder {
     private boolean refrigerator;
     private boolean oven;
     private int width;
-    private int heiht;
+    private int height;
     private String color;
 
-    public boolean getStove() {
-        return stove;
-    }
-
-    public void setStove(boolean stove) {
+    public KitchenBuilder stove(final boolean stove){
         this.stove = stove;
+        return this;
     }
 
-    public boolean getSink() {
-        return sink;
-    }
-
-    public void setSink(boolean sink) {
+    public KitchenBuilder sink(final boolean sink){
         this.sink = sink;
+        return this;
     }
 
-    public int getWindows() {
-        return windows;
+    public KitchenBuilder windows(final int windows){
+        this.windows= windows;
+        return this;
     }
 
-    public void setWindows(int windows) {
-        this.windows = windows;
-    }
-
-    public boolean getRefrigerator() {
-        return refrigerator;
-    }
-
-    public void setRefrigerator(boolean refrigerator) {
+    public KitchenBuilder refrigerator(final boolean refrigerator){
         this.refrigerator = refrigerator;
+        return this;
     }
 
-    public boolean getOven() {
-        return oven;
-    }
-
-    public void setOven(boolean oven) {
+    public KitchenBuilder oven(final boolean oven){
         this.oven = oven;
+        return this;
     }
 
-    public int getWidth() {
-        return width;
+    public Kitchen width(final int width){
+        this.width= width;
+        return this;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
+    public Kitchen height(final int height){
+        this.height = height;
+        return this;
     }
 
-    public int getHeiht() {
-        return heiht;
-    }
-
-    public void setHeiht(int heiht) {
-        this.heiht = heiht;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
+    public KitchenBuilder color (final String color){
         this.color = color;
-    }
-
-    KitchenBuilder(){
-
+        return this;
     }
     public Kitchen build(){
-        Kitchen kitchen = new Kitchen(this);
-        return kitchen;
+        return new Kitchen(stove, sink, windows, refrigerator, oven ,width, height, color);
     }
 
-    }
+}
 
