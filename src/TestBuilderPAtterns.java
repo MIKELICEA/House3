@@ -21,7 +21,7 @@ public class TestBuilderPAtterns {
                         .color("white")
                         .chairsCapacity(8)
                         .build())
-                .bedRoom(BedRoom.builder()
+                .bedRooms(BedRoom.builder()
                         .bedSize(BedSize.queen)
                         .tv(false)
                         .width(5)
@@ -30,4 +30,5 @@ public class TestBuilderPAtterns {
                         .build())
                 .build();
     }
+
 }

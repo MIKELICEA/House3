@@ -15,6 +15,8 @@ public class BedRoom {
         this.width = width;
         this.height = height;
         this.color = color;
+
+        bedRoomCount++;
     }
 
     public BedSize getBedSize() {

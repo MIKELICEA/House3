@@ -5,8 +5,7 @@ public class BedRoomBuilder {
     private int width;
     private int height;
     private String color;
-
-    public BedRoomBuilder windows(final BedSize bedSize){
+    public BedRoomBuilder bedSize(final BedSize bedSize){
         this.bedSize = bedSize;
         return this;
     }

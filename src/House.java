@@ -3,8 +3,8 @@ public class House{
     private final DiningRoom diningRoom;
     private final LivingRoom livingRoom;
 
-    private final RestRoom []restRooms;
-    private final BedRoom []bedRooms;
+    private final RestRoom restRoom;
+    private final BedRoom bedRoom;
     private final Yard yard;
     private static int houseCount;
     public static int houseCount(){
@@ -12,13 +12,15 @@ public class House{
         return houseCount;
     }
 
-    public House(Kitchen kitchen, DiningRoom diningRoom, LivingRoom livingRoom, RestRoom[] restRooms, BedRoom[] bedRooms, Yard yard) {
+    public House(Kitchen kitchen, DiningRoom diningRoom, LivingRoom livingRoom, RestRoom restRoom, BedRoom bedRoom, Yard yard) {
         this.kitchen = kitchen;
         this.diningRoom = diningRoom;
         this.livingRoom = livingRoom;
-        this.restRooms = restRooms;
-        this.bedRooms = bedRooms;
+        this.restRoom = restRoom;
+        this.bedRoom = bedRoom;
         this.yard = yard;
+
+        houseCount++;
     }
 
     public Kitchen getKitchen() {
@@ -33,12 +35,12 @@ public class House{
         return livingRoom;
     }
 
-    public RestRoom[] getRestRoom() {
-        return restRooms;
+    public RestRoom getRestRoom() {
+        return restRoom;
     }
 
-    public BedRoom[] getBedRooms() {
-        return bedRooms;
+    public BedRoom getBedRooms() {
+        return bedRoom;
     }
 
     public Yard getYard() {

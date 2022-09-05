@@ -52,22 +52,21 @@ public class Kitchen {
         return color;
     }
 
-    public String toString(){
-        return  "Kitchen: "+
-                "\n  Stove -> "+this.stove+
-                "\n  Sink -> "+this.sink+
-                "\n  Windows -> "+this.windows+
-                "\n  Refrigerator -> "+this.refrigerator+
-                "\n  Oven-> "+this.oven+
-                "\n  Width -> "+this.width+
-                "\n  Height -> "+this.height+
-                "\n  COlor-> "+this.color;
+    public String toString() {
+        return "Kitchen: " +
+                "\n  Stove -> " + this.stove +
+                "\n  Sink -> " + this.sink +
+                "\n  Windows -> " + this.windows +
+                "\n  Refrigerator -> " + this.refrigerator +
+                "\n  Oven-> " + this.oven +
+                "\n  Width -> " + this.width +
+                "\n  Height -> " + this.height +
+                "\n  COlor-> " + this.color;
     }
 
-    public static KitchenBuilder builder(){
+    public static KitchenBuilder builder() {
         return new KitchenBuilder();
     }
-
-
+}
 
 

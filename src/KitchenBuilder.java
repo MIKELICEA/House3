@@ -34,12 +34,12 @@ public class KitchenBuilder {
         return this;
     }
 
-    public Kitchen width(final int width){
+    public KitchenBuilder width(final int width){
         this.width= width;
         return this;
     }
 
-    public Kitchen height(final int height){
+    public KitchenBuilder height(final int height){
         this.height = height;
         return this;
     }

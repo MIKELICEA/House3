@@ -3,8 +3,8 @@ public class HouseBuilder{
     private Kitchen kitchen;
     private DiningRoom diningRoom;
     private LivingRoom livingRoom;
-    private RestRoom []restRooms;
-    private BedRoom []bedRooms;
+    private RestRoom restRoom;
+    private BedRoom bedRoom;
     private Yard yard;
 
     public HouseBuilder kitchen(final Kitchen kitchen){
@@ -22,13 +22,13 @@ public class HouseBuilder{
         return this;
     }
 
-    public HouseBuilder restRooms(final RestRoom restRooms){
-        this.restRooms = restRooms;
+    public HouseBuilder restRoom(final RestRoom restRoom){
+        this.restRoom = restRoom;
         return this;
     }
 
-    public HouseBuilder bedRooms (final BedRoom bedRooms){
-        this.bedRooms = bedRooms;
+    public HouseBuilder bedRooms(final BedRoom bedRooms){
+        this.bedRoom = bedRoom;
         return this;
     }
 
@@ -38,7 +38,7 @@ public class HouseBuilder{
     }
 
     public House build(){
-        return new House(kitchen, diningRoom, livingRoom, restRooms, bedRooms, yard);
+        return new House(kitchen, diningRoom, livingRoom, restRoom, bedRoom, yard);
     }
 
 }
